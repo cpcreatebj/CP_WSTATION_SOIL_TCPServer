@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5316EB10-41A9-46DF-A646-CD75B463C8D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP_WSMonitor</RootNamespace>
+    <AssemblyName>CP_WSMonitor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>www.ico.la_55_128X128_1373890490.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Program Files\MySQL\Connector NET 6.4.4\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="cpORDER.cs" />
+    <Compile Include="crc.cs" />
+    <Compile Include="form\Form_data_zhaoce_soil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_data_zhaoce_soil.Designer.cs">
+      <DependentUpon>Form_data_zhaoce_soil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form_station_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_station_config.Designer.cs">
+      <DependentUpon>Form_station_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form_data_jishi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_data_jishi.Designer.cs">
+      <DependentUpon>Form_data_jishi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form_data_hour_soil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_data_hour_soil.Designer.cs">
+      <DependentUpon>Form_data_hour_soil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form_data_zhaoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_data_zhaoce.Designer.cs">
+      <DependentUpon>Form_data_zhaoce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math.cs" />
+    <Compile Include="TCP.cs" />
+    <Compile Include="comm.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileLog.cs" />
+    <Compile Include="order.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tcp_Ser.cs" />
+    <Compile Include="form\Form_data_hour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form_data_hour.Designer.cs">
+      <DependentUpon>Form_data_hour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="terminalDATADTO.cs" />
+    <Compile Include="terminaldataPROCESS.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form_data_zhaoce_soil.resx">
+      <DependentUpon>Form_data_zhaoce_soil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form_station_config.resx">
+      <DependentUpon>Form_station_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form_data_jishi.resx">
+      <DependentUpon>Form_data_jishi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form_data_hour_soil.resx">
+      <DependentUpon>Form_data_hour_soil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form_data_zhaoce.resx">
+      <DependentUpon>Form_data_zhaoce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="form\Form_data_hour.resx">
+      <DependentUpon>Form_data_hour.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="log.txt" />
+    <Content Include="www.ico.la_55_128X128_1373890490.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
